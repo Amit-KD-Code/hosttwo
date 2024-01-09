@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="icon" type="image/x-icon" href="../imgs/formico.png">
+</head>
+<style>
+    body{
+        text-align: center;
+        background-color: rgb(75, 160, 224);
+    }
+    form{
+        text-align: left;
+        border: 9px solid bisque;
+        border-radius: 6px;
+        background-color: rgb(115, 148, 5);
+        width:fit-content;
+        margin: auto;
+        padding: 20px; 
+    }
+    .parents{
+        font-family: 'Fira Code';
+        font-weight: 800;
+        font-style: oblique;
+    }
+    .inputs{
+        border-radius: 5px;
+        margin-top: 4px;
+        margin-bottom: 10px;
+        width: 300px;
+    }
+    #submit{
+        border-radius: 5px;
+        font-weight: 700;
+        font-family: 'Fira Code';
+    }
+</style>
+<body>
+    <h1>The Form</h1>
+        <form method="get" action="./response.html">
+            <span class="parents">Name :</span>
+            <br>
+            <input class="inputs" type="text" placeholder="Enter your Full Name" required><br>
+            <span class="parents">Email :</span>
+            <br>
+            <input class="inputs" type="email" placeholder="Enter Your Email" required><br>
+            <span class="parents">Password :</span>
+            <br>
+            <input class="inputs" type="password" placeholder="Enter Your Password" required><br>
+            <span class="parents">Confirm password :</span>
+            <br>
+            <input class="inputs" type="password" placeholder="Retype The Password" required><br>
+            <span class="parents">Mobile :</span>
+            <br>
+            <input class="inputs" type="number" placeholder="Enter Your Phone No." required><br>
+            <span class="parents" >Gender :</span>
+            <br>
+            <input id="male"type="radio" name="gender" value="Male"><label for="male">Male</label><br>
+            <input id="female" type="radio" name="gender" value="FeMale"><label for="female">Female</label><br>
+            <input id="others" type="radio" name="gender" value="Others"><label for="others">Others</label><br><br>
+            <span class="parents" style="margin-top: 10px;">Hobbies :</span><br>
+            <input id="music" type="checkbox" name="one" value="Music"><label for="music">Music</label>
+            <input id="sports" type="checkbox" name="one" value="Sports"><label for="sports">Sports</label>
+            <input id="travel" type="checkbox" name="one" value="Travel"><label for="travel">Travel</label>
+            <input id="movies" type="checkbox" name="one" value="Movies"><label for="movies">Movies</label>
+            <br><br><label for="employ" class="parents">Employment :</label><br>
+
+            <select class="inputs" name="employ" id="cars" autofocus>
+                <option value="Private Sector" >Private Job</option>
+                <option value="Government Job">Government Job</option>
+                <option value="Defence Forces">Defence</option>
+                <option value="Others">Others</option>
+            </select><br><br>
+
+            <span class="parents">Income :</span><br>
+            1000
+            <input id="range"type="range" min="1000" max="1000000" value="10" ondrag="RangeInput(this.value)">
+            1000000<br><br>
+
+            <span class="parents">Date of Birth &#8594;</span>
+            <input type="date" name="dob" class="inputs" ><br>
+            <span  class="parents">Enter the address :</span><br>
+            <textarea class="inputs" placeholder="Enter Your complete address"></textarea><br>
+            <div style="text-align: center;"><a href="response.html"><input type="submit" id="submit"></a></div>
+        </form>
+</body>
+</html>
